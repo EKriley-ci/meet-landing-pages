@@ -264,7 +264,7 @@ footer .number {
 
 footer .footer {
   padding: 64px 32px;
-  background: url(/images/hero.png) #4D96A9;
+  background: url(/images/hero.png), #4D96A9;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
