@@ -56,8 +56,8 @@ header .hero {
   grid-gap: 5px;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: 210px 1fr;
-      grid-template-rows: 210px 1fr;
+  -ms-grid-rows: 210px  1fr;
+      grid-template-rows: 210px  1fr;
 }
 
 header .hero__face-left, header .hero__face-right {
@@ -102,10 +102,12 @@ header .hero__text-content h1 {
   font-size: 3.4rem;
   color: #28283D;
   line-height: 110%;
+  font-family: 'Red Hat Display';
 }
 
 header .hero__text-content .send-message {
   line-height: 150%;
+  font-weight: 500;
   font-size: 1.1rem;
   color: #87879D;
 }
@@ -242,32 +244,26 @@ main .main-content__send-message {
 }
 
 footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 100px 2fr;
-      grid-template-rows: 100px 2fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer .number {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -ms-grid-column: 2;
-  grid-column: 2;
   z-index: 1;
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 footer .footer {
   padding: 64px 32px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
-  -ms-grid-row: 2;
-  grid-row: 2;
   background: url(/images/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,7 +311,145 @@ footer .footer-btn:hover {
   background-color: #D9B8FF;
 }
 
+footer .footer-btn:hover span {
+  color: #D9B8FF;
+}
+
 footer .footer-btn span {
   color: #D9B8FF;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+  header .hero {
+    -ms-grid-rows: 210px 1fr 1fr;
+        grid-template-rows: 210px 1fr 1fr;
+  }
+  header .hero__text-content {
+    max-width: 448.296px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -webkit-transform: translateX(40%) translateY(-40%);
+            transform: translateX(40%) translateY(-40%);
+  }
+  header .hero__text-content h1 {
+    padding: 0;
+    font-family: 'Red Hat Display';
+    font-size: 4rem;
+  }
+  header .hero__text-content .content-btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .main-content {
+    max-width: 680px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .main-content__img-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  main .main-content__subtitle {
+    font-size: 1.5rem;
+    max-width: 445px;
+  }
+  main .main-content h2 {
+    font-family: 'Red Hat Display';
+    max-width: 445px;
+    font-size: 2.5rem;
+  }
+  main .main-content__send-message {
+    font-size: 1.2rem;
+    max-width: 534px;
+  }
+}
+
+footer .footer-title {
+  font-size: 2.5rem;
+}
+
+footer .footer-p {
+  max-width: 534px;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1190px) {
+  header .hero {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .hero__text-content {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  header .hero__text-content h1 {
+    padding: 0;
+    font-family: 'Red Hat Display';
+    font-size: 3.4rem;
+  }
+  header .hero__text-content .content-btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main {
+    max-width: 1120px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .main-content__img-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  main .main-content__subtitle {
+    font-size: 1.5rem;
+    max-width: 445px;
+  }
+  main .main-content h2 {
+    font-family: 'Red Hat Display';
+    max-width: 445px;
+    font-size: 2.5rem;
+  }
+  main .main-content__send-message {
+    font-size: 1.2rem;
+    max-width: 534px;
+  }
+  footer {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+  footer .footer-btn {
+    max-width: 213px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
