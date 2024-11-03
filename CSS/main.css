@@ -264,7 +264,7 @@ footer .number {
 
 footer .footer {
   padding: 64px 32px;
-  background: url(/images/hero.png);
+  background-image: url(/images/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -376,6 +376,30 @@ footer .footer-btn span {
   }
 }
 
+footer .footer {
+  padding: 64px 32px;
+  background-image: url(/images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-align: center;
+}
+
 footer .footer-title {
   font-size: 2.5rem;
 }
@@ -442,6 +466,27 @@ footer .footer-p {
         align-self: center;
   }
   footer .footer {
+    padding: 64px 32px;
+    background-image: url(/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    text-align: center;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
